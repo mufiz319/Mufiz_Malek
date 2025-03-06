@@ -1,0 +1,220 @@
+1) What are the types of Applications? 
+- In Python, the types of applications you can develop are quite diverse due to the language’s versatility and extensive libraries. Here are some common types of applications you might build with Python: Web Applications, Desktop Applications, Machine Learning and AI etc.
+
+
+2) What is programing? 
+- Programming, also known as coding or software development, is the process of creating instructions for a computer to perform specific tasks or solve problems. It involves writing code in a programming language that a computer can understand and execute.
+
+
+3) What is Python? 
+- Python is a high-level, interpreted programming language known for its readability, simplicity, and versatility. It was created by Guido van Rossum and first released in 1991. Python emphasizes code readability and supports multiple programming paradigms, including procedural, object-oriented, and functional programming
+
+
+7)How memory is managed in Python?
+- Memory management in Python is an integral part of the language's design, aimed at simplifying the developer's job by handling allocation and deallocation of memory automatically. Python employs several mechanisms to manage memory efficiently:
+->Automatic Memory Management
+->Garbage Collection
+->Memory Allocation
+
+
+8)What is the purpose continuing statement in python?
+- In Python, the continue statement is used within loops to skip the rest of the code inside the current iteration and proceed to the next iteration of the loop. It is particularly useful when you want to bypass certain conditions or parts of the loop’s body under specific circumstances.
+
+
+25)What is List? How will you reverse a list? 
+- A list in Python is a mutable, ordered collection of items that can be of different data types, including integers, strings, and other objects. Lists are defined using square brackets [] and can contain any number of items. Lists are versatile and commonly used for storing and manipulating sequences of data.
+
+There are several ways to reverse a list in Python such as,
+->Using the reverse() Method
+->Using the reversed() Function
+
+
+26)How will you remove last object from a list? 
+- To remove the last object from a list in Python, you have a few straightforward options. Here is the most common method:
+->Using the pop() Method
+The pop() method removes and returns the last item from the list. If you do not specify an index, it defaults to removing the last item.
+my_list = [1, 2, 3, 4, 5]
+last_item = my_list.pop()  
+print(my_list)  # Output: [1, 2, 3, 4]
+print(last_item)  # Output: 5
+
+
+27)Suppose list1 is [2, 33, 222, 14, and 25], what is list1 [-1]? 
+- 25
+
+28)Differentiate between append () and extend () methods? 
+-> Append() Method
+Purpose: Adds a single element to the end of the list.
+Behavior: The element added can be of any data type, including another list. When a list is added as an element, it is added as a nested list.
+Syntax: list.append(element)
+Return Value: None (the method modifies the list in place).
+
+-> Extend() Method
+Purpose: Extends the list by appending elements from an iterable (such as another list, tuple, or string).
+Behavior: The elements of the iterable are added individually to the end of the list. The iterable itself is not added as a single element.
+Syntax: list.extend(iterable)
+Return Value: None (the method modifies the list in place).
+
+
+30)How will you compare two lists? 
+-
+list1 = [1, 2, 3, 4]
+list2 = [4, 3, 2, 1]
+
+print(sorted(list1) == sorted(list2))  # Output: True
+
+
+43)What is tuple? Difference between list and tuple. 
+- A tuple is a built-in data structure in Python that is used to store a collection of items. Unlike lists, tuples are immutable, meaning that once a tuple is created, its contents cannot be changed. 
+-> Here are the difference between list and tuple:
+-> Tuple
+Definition: A tuple is defined by placing a sequence of values inside parentheses () separated by commas.
+Immutability: Tuples are immutable. Once you create a tuple, you cannot modify its contents (e.g., you cannot add, remove, or change elements).
+my_tuple = (1, 2, 3, "hello")
+-> List
+Definition: A list is defined by placing a sequence of values inside square brackets [] separated by commas.
+Mutability: Lists are mutable. You can modify, add, or remove elements after the list is created.
+my_list = [1, 2, 3, "hello"]
+
+47)How will you create a dictionary using tuples in python? 
+- Using Tuples as Dictionary Items:
+list_of_tuples = [('apple', 1), ('banana', 2), ('cherry', 3)]
+
+my_dict = dict(list_of_tuples)
+
+print(my_dict)
+# Output: {'apple': 1, 'banana': 2, 'cherry': 3}
+
+-> Creating a Dictionary with Tuples as Keys:
+my_dict = {('a', 1): 'value1', ('b', 2): 'value2'}
+
+print(my_dict)
+# Output: {('a', 1): 'value1', ('b', 2): 'value2'}
+
+52)How Do You Check the Presence of a Key in A Dictionary? 
+- To check the presence of a key in a dictionary in Python, you have several straightforward methods. Here are the most common ways: 
+in Operator: Most concise and efficient way to check for key presence.
+get() Method: Useful for checking and retrieving values with an optional default.
+keys() Method: Can be used but is less efficient compared to in.
+Try-Except Block: Useful for handling cases where you might want to catch exceptions for missing keys.
+Dictionary Comprehensions: Helpful for checking and processing multiple keys.
+These methods provide flexibility depending on whether you just need to check for the presence of a key or also want to handle the associated value.
+
+
+65)How Many Basic Types of Functions Are Available in Python? 
+-In Python, functions can be categorized based on their definition and usage. Here are the main basic types of functions available:
+
+1. Built-in Functions
+Python comes with a set of built-in functions that are always available. These functions perform standard operations and do not require additional imports. Examples include:
+
+print()
+len()
+type()
+max()
+min()
+sum()
+abs()
+
+2. User-Defined Functions
+These are functions that you create yourself to perform specific tasks. You define them using the def keyword. For example:
+def greet(name):
+    return ("Hello", name)
+
+3. Lambda Functions
+Lambda functions are small, anonymous functions defined with the lambda keyword. They are often used for short, throwaway functions where a full def block would be overkill. Example:
+square = lambda x: x * x
+print(square(5))  # Output: 25
+
+66)How can you pick a random item from a list or tuple? 
+- The random.choice() function is designed specifically to pick a random item from a sequence (such as a list or tuple). Here’s how to use it:
+
+Import the random Module: First, you need to import the random module to access the choice() function.
+
+Call random.choice() with Your List or Tuple
+
+67)How can you pick a random item from a range? 
+- To pick a random item from a range in Python, you can use the random module, specifically the random.choice() function, but since range objects are not directly supported by random.choice(), you need to convert the range to a list first.
+
+Using random.choice(): Convert the range to a list and then pick a random item.
+Using random.randint(): Directly generate a random integer within the specified range.
+Both methods are valid depending on whether you need to pick an item from a conceptual list or just need a random integer within a specified range.
+
+68)How can you get a random number in python? 
+- To generate random numbers in Python, you can use the random module, which provides various functions for different types of random number generation.
+random.randint(a, b): Returns a random integer between a and b, inclusive.
+random.random(): Returns a random floating-point number between 0.0 and 1.0.
+random.uniform(a, b): Returns a random floating-point number between a and b.
+
+69)How will you set the starting value in generating random numbers? 
+- To set the starting value (or seed) for generating random numbers in Python, you use the random.seed() function from the random module. Setting the seed ensures that you get the same sequence of random numbers each time you run your code, which can be useful for debugging, reproducibility, or testing.
+
+random.seed(a=None): Sets the seed for the random number generator. If a is None, the seed is initialized from the current time or system state.
+Reproducibility: By setting the same seed, you ensure that the sequence of random numbers is reproducible, which is useful for debugging or comparing results.
+Changing the Seed: Setting a different seed will give a different sequence of random numbers.
+
+70) How will you randomize the items of a list in place? 
+- To randomize the items of a list in place in Python, you can use the random.shuffle() function from the random module. This function shuffles the elements of the list in place, meaning the list is modified directly and no new list is created.
+
+71)What is File function in python? What are keywords to create and write file. 
+- In Python, handling files involves various functions and methods that allow you to open, create, read, write, and close files. The open() function is central to file operations, and several keywords and functions are associated with creating and writing to files.
+open(file_path, mode): The function used to open or create a file.
+Modes:
+'r': Read mode.
+'w': Write mode .
+'a': Append mode.
+'b': Binary mode .
+'x': Exclusive creation mode.
+
+83)Explain Exception handling? What is an Error in Python? 
+- An exception is an event that occurs during the execution of a program that disrupts the normal flow of the program. Exceptions can be caused by a variety of issues, such as invalid user input, file not found, division by zero, etc.
+- Basic Syntax
+Python uses try, except, else, and finally blocks to handle exceptions. Here’s how each part works:
+
+try block: Contains the code that may raise an exception.
+except block: Contains code that runs if an exception occurs in the try block.
+else block (optional): Contains code that runs if no exceptions occur in the try block.
+finally block (optional): Contains code that runs no matter what, whether an exception occurred or not. It is often used for cleanup actions like closing files.
+
+- In Python, an error is a problem in the code that prevents it from running correctly. Errors are generally classified into two main categories: syntax errors and exceptions.
+
+
+84)How many except statements can a try-except block have? Name Some built-in exception classes:
+- A try-except block in Python can have multiple except statements. Each except block is used to handle a specific type of exception that might be raised in the try block. There is no strict limit to the number of except blocks you can include, although having too many can make the code harder to maintain. Generally, you include only as many except blocks as needed to handle the exceptions that are relevant to your code.
+
+- Number of except Statements: You can have multiple except statements to handle different exceptions.
+Built-in Exception Classes: Include classes like Exception, ZeroDivisionError, ValueError, TypeError, IndexError, KeyError, FileNotFoundError, and more.
+
+85)When will the else part of try-except-else be executed? 
+- The else block is executed only if the try block completes without raising any exceptions.
+- If an exception occurs in the try block and is handled by an except block, the else block is skipped.
+- The finally block runs regardless of whether an exception occurred or not.
+
+The else block is useful for code that should only run if the try block was successful and didn't raise any exceptions. It helps in keeping the code organized and separating the error-handling logic from the successful execution logic.
+
+86)Can one block of except statements handle multiple exception? 
+- Yes, a single except block can handle multiple exceptions in Python. You can do this by specifying a tuple of exception types in the except clause.
+
+87)When is the finally block executed? 
+- The finally block in a try-except-finally construct is executed regardless of whether an exception is raised or not. It is used for code that must run under all circumstances, such as cleanup actions. This ensures that certain actions are always performed, no matter what happens in the try and except blocks.
+- The finally block is executed no matter what, whether an exception is raised or not.
+It executes after the try block (and any except blocks, if present) and before the function or script completes or the exception propagates.
+The finally block is crucial for resource management and ensuring that necessary cleanup or finalization tasks are completed reliably.
+
+
+88)What happens when „1‟== 1 is executed? 
+- It will show SyntaxError : invalid character '„' (U+201E)
+
+89)How Do You Handle Exceptions with Try/Except/Finally in Python? Explain with coding snippets. 
+- try Block: Contains code that may potentially raise an exception. If an exception occurs here, the rest of the try block is skipped, and control moves to the appropriate except block.
+
+- except Block: Contains code that handles specific exceptions. You can have multiple except blocks to handle different types of exceptions. If an exception matches one of the except blocks, that block is executed.
+
+- finally Block: Contains code that will always execute, regardless of whether an exception was raised or not. This block is typically used for cleanup actions such as closing files or releasing resources.
+
+
+
+
+
+
+
+
